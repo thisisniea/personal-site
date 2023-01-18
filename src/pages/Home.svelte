@@ -10,12 +10,12 @@
     and cat enthusiast.
 </h1>
 
-<p>
+<p class="para">
     I'm Brandon, a {age}-year-old hobbyist developer from The United States. I have a strong interest in all things low-level, including reverse engineering,
     assembly, and operating systems. Aside from that, I also enjoy working on web applications, hence the existence of this website.
 </p>
 
-<p>
+<p class="para">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti possimus repellat illo beatae molestias? Voluptatem nobis voluptate rem earum consectetur nisi non inventore, error nesciunt dicta cupiditate, at impedit quia?
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, labore est! V
     luptatem odit quis maxime quas deleniti eveniet facere ratione, voluptatibus consequuntur a, quae, beatae quo doloremque. Deleniti, laborum soluta.
@@ -81,8 +81,8 @@
 </div>
 
 <style lang="postcss">
-    /* horizontal card layout */
-    /* eg, one column multi row */
+
+
     .spotlight {
         display: grid;
         grid-gap: 1rem;
@@ -93,9 +93,10 @@
         display: flex;
         padding: 1rem;
 
-        background-color: rgba(var(--text-color), 0.1);
+        background-color: rgba(var(--text-color), 0.05);
         border-radius: 1rem;
-        border: 1px solid rgba(var(--text-color), 0.2);
+        border: 1px solid rgba(var(--text-color), 0.1);
+        backdrop-filter: blur(1rem);
         
         & img {
             width: 100px;
@@ -125,11 +126,18 @@
         margin: 0;
         padding: 0;
         margin-bottom: 2rem;
+        margin-left: -1rem;
+        width: calc(100% + 2rem);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
         br {
             display: none;
+        }
+
+        h1 {
+            margin-left: 0;
+            width: fit-content;
         }
     }
 
