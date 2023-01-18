@@ -6,7 +6,7 @@
 <nav>
     <div>
         <span class="logo">
-            niea.me
+            <span class="name">niea</span>.me
         </span>
         <button class:active={activeNum === 0} on:click|preventDefault={() => {activeNum = 0}}>Home</button>
         <button class:active={activeNum === 1} on:click|preventDefault={() => {activeNum = 1}}>About</button>
@@ -26,6 +26,11 @@
         border-bottom: 1px solid rgba(127, 127, 127, 0.1);
         background-color: rgba(var(--background-color), 0.8);
         backdrop-filter: blur(10px);
+    .name {
+        font-weight: bold;
+        font-style: italic;
+        transform: skewX(-15deg);
+        display: inline-block;
     }
 
     hr {
@@ -62,6 +67,16 @@
         background-color: transparent;
         font-family: inherit;
         border-radius: 0.25rem;
+    }
+
+    @media (max-width: 600px) {
+        button {
+            margin-left: .25rem;
+        }
+
+        div {
+            padding: 0 .5rem;
+        }
     }
 
     button:not(.active) {
