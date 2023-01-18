@@ -26,6 +26,9 @@
         border-bottom: 1px solid rgba(127, 127, 127, 0.1);
         background-color: rgba(var(--background-color), 0.8);
         backdrop-filter: blur(10px);
+        z-index: 1;
+    }
+    
     .name {
         font-weight: bold;
         font-style: italic;
