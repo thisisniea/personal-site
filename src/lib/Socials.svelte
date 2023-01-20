@@ -20,11 +20,12 @@
         align-items: center;
         justify-content: flex-start;
         margin: 2rem 0;
+        width: min-content;
+        gap: 1rem;
     }
 
     a {
         font-size: 1.2rem;
-        margin-right: 1rem;
         color: rgba(var(--text-color), 0.8);
     }
 
