@@ -1,26 +1,30 @@
 <script lang="ts">
     import Socials from "../lib/Socials.svelte";
-import Spotlight from "../lib/Spotlight.svelte";
+    import Spotlight from "../lib/Spotlight.svelte";
 
     // calculate age
-    const age = Math.floor((new Date().getTime() - new Date("2003-08-04").getTime()) / 1000 / 60 / 60 / 24 / 365);
+    const age = Math.floor((new Date().getTime() - new Date("2003-08-07").getTime()) / 1000 / 60 / 60 / 24 / 365);
 
 </script>
 
+<svelte:head>
+    <title>Home | niea.me</title>
+</svelte:head>
+
 <h1>
-    Creative technologist, <br>
-    low-level software developer<abbr title="Oxford comma">,</abbr> <br>
+    Creative technologist,<br>
+    low-level software developer<abbr title="Oxford comma">,</abbr><br>
     and cat enthusiast.
 </h1>
 
-<p class="para">
+<p>
     Hi, my name is Brandon, and I'm a {age}-year-old hobbyist developer from The United States.
     I have a strong pulse and genuine interest in all things low-level, including reverse engineering, assembly language
     programming, and operating systems tinkering. Besides that, I also take great pleasure in developing web applications
     from scratch - which is why this website was born!
 </p>
 
-<p class="para">
+<p>
     Here you will find a comprehensive directory of all my projects, so you can easily explore the
     work that I have done. Furthermore, you can get to know me better by reading through my personal profile. Finally,
     if you're curious about my activity on social media platforms such as Twitter and YouTube, then you'll be able
