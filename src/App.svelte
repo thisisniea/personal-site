@@ -2,7 +2,6 @@
   import Nav from './lib/Nav.svelte'
 
   import Home from './pages/Home.svelte'
-  import About from './pages/About.svelte'
   import Projects from './pages/Projects.svelte'
   import Tools from './pages/Tools.svelte'
 
@@ -15,10 +14,8 @@
   {#if activeNum === 0}
     <Home />
   {:else if activeNum === 1}
-    <About />
-  {:else if activeNum === 2}
     <Projects />
-  {:else if activeNum === 3}
+  {:else if activeNum === 2}
     <Tools />
   {/if}
 </main>

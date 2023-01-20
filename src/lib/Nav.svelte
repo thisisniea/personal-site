@@ -10,9 +10,8 @@
             <NameEasterEgg />
         </span>
         <button class:active={activeNum === 0} on:click|preventDefault={() => {activeNum = 0}}>Home</button>
-        <button class:active={activeNum === 1} on:click|preventDefault={() => {activeNum = 1}}>About</button>
-        <button class:active={activeNum === 2} on:click|preventDefault={() => {activeNum = 2}}>Projects</button>
-        <button class:active={activeNum === 3} on:click|preventDefault={() => {activeNum = 3}}>Tools</button>
+        <button class:active={activeNum === 1} on:click|preventDefault={() => {activeNum = 1}}>Projects</button>
+        <button class:active={activeNum === 2} on:click|preventDefault={() => {activeNum = 2}}>Tools</button>
     </div>
     <hr>
 </nav>
