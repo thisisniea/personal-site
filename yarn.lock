@@ -738,11 +738,6 @@ svelte-check@^2.10.0:
     svelte-preprocess "^4.0.0"
     typescript "*"
 
-svelte-dark-mode@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/svelte-dark-mode/-/svelte-dark-mode-2.1.0.tgz#18389f8e73d35bf7d5c27355ded6db63d2897019"
-  integrity sha512-/QmIqWGwzcfE82FAMuHBlKFwudW7Vcos60Ii8j/mJZ0H6kGAXwL5EGlcc8voBJMJv/i0QZmhp5b1ZX/XKg9NJQ==
-
 svelte-hmr@^0.15.1:
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.1.tgz#d11d878a0bbb12ec1cba030f580cd2049f4ec86b"
