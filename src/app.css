@@ -29,6 +29,17 @@ a {
   }
 }
 
+p {
+  font-weight: light;
+  line-height: 1.5rem;
+  font-size: .9rem;
+  color: rgba(var(--text-color), 0.8);
+}
+
+p.subtitle {
+  margin-top: 0;
+}
+
 body {
   margin: 0;
   padding: 0;

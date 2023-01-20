@@ -1,1 +1,3 @@
-<h1>About</h1>
+<script lang="ts">
+    // import WordTicker from "../lib/WordTicker.svelte";
+</script>

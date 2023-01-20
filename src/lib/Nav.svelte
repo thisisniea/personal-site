@@ -1,4 +1,5 @@
 <script lang="ts">
+    import NameEasterEgg from "./NameEasterEgg.svelte";
     export let activeNum: number = 0;
 </script>
 
@@ -6,7 +7,7 @@
 <nav>
     <div>
         <span class="logo">
-            <span class="name">niea</span>.me
+            <NameEasterEgg />
         </span>
         <button class:active={activeNum === 0} on:click|preventDefault={() => {activeNum = 0}}>Home</button>
         <button class:active={activeNum === 1} on:click|preventDefault={() => {activeNum = 1}}>About</button>
@@ -19,7 +20,7 @@
 <style>
     nav {
         position: fixed;
-        top: 0;
+        top: 3px;
         left: 0;
         width: 100%;
         height: 3rem;
@@ -28,17 +29,10 @@
         backdrop-filter: blur(10px);
         z-index: 1;
     }
-    
-    .name {
-        font-weight: bold;
-        font-style: italic;
-        transform: skewX(-15deg);
-        display: inline-block;
-    }
 
     hr {
         position: absolute;
-        top: 0;
+        top: -3px;
         left: 0;
         width: 100%;
         height: 3px;
@@ -59,8 +53,10 @@
     }
 
     .logo {
+        margin-left: 0.75rem;
         margin-right: auto;
         user-select: none;
+        transform: skewX(-15deg);
     }
 
     button {
