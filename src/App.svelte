@@ -1,10 +1,21 @@
 <script lang="ts">
   import Nav from "./lib/Nav.svelte";
-
   import Spotlight from "./lib/Spotlight.svelte";
+  import { MetaTags } from 'svelte-meta-tags';
 
   const age = Math.floor((new Date().getTime() - new Date("2003-08-07").getTime()) / 1000 / 60 / 60 / 24 / 365);
 </script>
+
+<MetaTags
+  title="Brandon's Digital Domain"
+  description="Brandon's personal website, acting as a public directory of his internet presence."
+  canonical="https://niea.me"
+  openGraph={{
+    url: 'https://niea.me',
+    title: 'Brandon\'s Digital Domain',
+    description: "Brandon's personal website, acting as a public directory of his internet presence."
+  }}
+/>
 
 <Nav />
 
