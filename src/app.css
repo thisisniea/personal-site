@@ -5,11 +5,13 @@
 
   --text-color: 232, 232, 232;
   --background-color: 17, 17, 17;
+  --box-shadow-color: 127, 127, 127, 0.5;
+  --text-shadow-color: 0, 0, 0, 0.5;
 
   color-scheme: light dark;
   color: rgba(var(--text-color));
   background-color: rgba(var(--background-color));
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 1px rgba(var(--text-shadow-color));
 
   box-sizing: border-box;
 
@@ -38,6 +40,13 @@ p {
 
 p.subtitle {
   margin-top: 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(var(--text-color), 0.1);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
 }
 
 body {

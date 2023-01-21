@@ -55,6 +55,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>{currentWord}.me</title>
+</svelte:head>
+
 <span class={$$props.class}>
     <em class:exploding={hoverCount >= 5} on:mouseenter={hover} style={`--skew: ${skew}; --rotate: ${rotate}; --scale: ${scale}`}>{currentWord}</em>.me
 </span>

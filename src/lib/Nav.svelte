@@ -1,6 +1,5 @@
 <script lang="ts">
     import NameEasterEgg from "./NameEasterEgg.svelte";
-    export let activeNum: number = 0;
 </script>
 
 
@@ -9,9 +8,9 @@
         <span class="logo">
             <NameEasterEgg />
         </span>
-        <button class:active={activeNum === 0} on:click|preventDefault={() => {activeNum = 0}}>Home</button>
-        <button class:active={activeNum === 1} on:click|preventDefault={() => {activeNum = 1}}>Projects</button>
-        <button class:active={activeNum === 2} on:click|preventDefault={() => {activeNum = 2}}>Tools</button>
+        <a href="https://github.com/thisisniea" target="_blank" rel="noreferrer" style="--color: 64, 120, 192;">GitHub</a>
+        <a href="https://discord.com/users/753760071724302476" target="_blank" rel="noreferrer" style="--color: 114, 137, 218;">Discord</a>
+        <a href="https://youtube.com/@this-is-niea" target="_blank" rel="noreferrer" style="--color: 255, 0, 0;">YouTube</a>
     </div>
     <hr>
 </nav>
@@ -58,17 +57,20 @@
         transform: skewX(-15deg);
     }
 
-    button {
+    a {
+        text-decoration: none;
         margin-left: 1rem;
         padding: 0.35rem 0.75rem;
-        border: none;
         background-color: transparent;
-        font-family: inherit;
+        font-family: Inter, sans-serif;
+        font-size: 0.85rem;
         border-radius: 0.25rem;
+        color: rgba(var(--text-color), 0.8);
+        outline: 1px solid rgba(var(--background-color), 0);
     }
 
     @media (max-width: 600px) {
-        button {
+        a {
             margin-left: .25rem;
         }
 
@@ -77,18 +79,24 @@
         }
     }
 
-    button:not(.active) {
-        /* 0.8 opacity text */
-        color: rgba(var(--text-color), 0.8);
-    }
-
-    button:hover {
-        background-color: rgba(127, 127, 127, 0.1);
-        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    a:hover {
+        outline: 1px solid rgba(var(--background-color), 0.1);
+        outline-color: rgba(var(--text-color), 0.1);
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, outline-color 0.1s ease-in-out;
         color: rgba(var(--text-color), 1);
     }
 
-    button.active {
-        background-color: rgba(127, 127, 127, 0.2);
+    @media (prefers-color-scheme: light) {
+        a:hover {
+            background-color: rgba(var(--color), 0.1);
+            outline-color: rgba(var(--color), 0.5);
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        a:hover {
+            background-color: rgba(var(--text-color), 0.1);
+            outline-color: rgba(var(--color), 0.5);
+        }
     }
 </style>
